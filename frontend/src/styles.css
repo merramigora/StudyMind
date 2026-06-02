@@ -1,0 +1,242 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  background: #263bff;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+button.secondary {
+  background: #e8ebff;
+  color: #263bff;
+}
+
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 36px 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  color: #263bff;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  line-height: 0.95;
+  margin: 0;
+}
+
+.heroText {
+  max-width: 680px;
+  color: #596579;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
+.heroActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.heroCard, .panel {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid #e2e7f0;
+  box-shadow: 0 20px 60px rgba(23, 32, 51, 0.08);
+  border-radius: 28px;
+}
+
+.heroCard {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+}
+
+.metric {
+  border-radius: 22px;
+  padding: 22px;
+  background: #f8f9ff;
+}
+
+.metric span {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #263bff;
+}
+
+.metric p {
+  margin: 4px 0 0;
+  color: #596579;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.panel {
+  padding: 24px;
+}
+
+.panelHeader {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.panelHeader svg {
+  color: #263bff;
+  flex-shrink: 0;
+}
+
+.panelHeader h2 {
+  margin: 0;
+}
+
+.panelHeader p {
+  margin: 4px 0 0;
+  color: #697589;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: #39445a;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+input, textarea {
+  border: 1px solid #d9dfeb;
+  border-radius: 16px;
+  padding: 0.9rem 1rem;
+  background: white;
+  color: #172033;
+}
+
+textarea {
+  min-height: 260px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.toolGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.miniForm {
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  gap: 12px;
+}
+
+.empty, .error {
+  border-radius: 22px;
+  padding: 22px;
+  background: #f8f9ff;
+  color: #697589;
+}
+
+.error {
+  background: #fff1f1;
+  color: #9b1c1c;
+}
+
+.output h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+.output p, .output li {
+  color: #48566d;
+  line-height: 1.7;
+}
+
+.chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chips span {
+  background: #e8ebff;
+  color: #263bff;
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.question, .flashcard {
+  background: #f8f9ff;
+  border: 1px solid #e2e7f0;
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.question p, .flashcard p {
+  color: #596579;
+  line-height: 1.6;
+}
+
+.flashcards {
+  display: grid;
+  gap: 12px;
+}
+
+.flashcard h4 {
+  margin: 0 0 8px;
+}
+
+@media (max-width: 860px) {
+  .hero, .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toolGrid, .miniForm {
+    grid-template-columns: 1fr;
+  }
+}
