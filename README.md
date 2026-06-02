@@ -131,6 +131,10 @@ POST /api/study-plan
 
 Built StudyMind, an AI-powered study assistant using React and FastAPI that turns study material into study guides, quizzes, flashcards, and exam prep plans, with a backend structure designed for future LLM and RAG integration.
 
+## What I Learned
+
+While building StudyMind, I practiced connecting a React frontend with a FastAPI backend and organizing the project like a real full-stack application. I also learned how to separate the user interface from the study generation logic so the app can later support real AI models, PDF parsing, and RAG-based search.
+
 ## Author
 
 Merra Migora
