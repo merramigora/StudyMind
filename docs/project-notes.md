@@ -17,4 +17,11 @@ Important future technical upgrade:
 - Store them in a vector database
 - Use retrieval before generating answers
 
+Additional ideas
+- Allow students to upload multiple documents for one course.
+- Add a progress dashboard showing quiz performance over time.
+- Support exporting flashcards to Anki format.
+- Add a confidence score for generated quiz answers.
+- Add support for instructor slide decks and lecture transcripts.
+
 That would turn StudyMind into a real RAG-based learning assistant.
