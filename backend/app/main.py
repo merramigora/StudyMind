@@ -1,3 +1,7 @@
+# These API routes are separated from the frontend so the app can grow later.
+# Right now the backend uses local generation logic, but the same routes can be
+# connected to an LLM or RAG pipeline without changing the React UI.
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
