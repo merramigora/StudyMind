@@ -11,7 +11,10 @@ def split_sentences(text: str) -> List[str]:
     sentences = re.split(r"(?<=[.!?])\s+", text)
     return [s.strip() for s in sentences if len(s.strip()) > 20]
 
-
+# Extracts frequently used terms from study material.
+# This is intentionally simple for the first version so the
+# project can run locally without external AI services.
+# Later this can be replaced with embeddings or NLP models.
 def extract_keywords(text: str, limit: int = 6) -> List[str]:
     stop_words = {
         "the", "and", "for", "with", "this", "that", "from", "are", "was",
@@ -46,7 +49,9 @@ def make_key_points(text: str) -> List[str]:
     keywords = extract_keywords(text)
     return [f"Review the main idea behind {keyword}." for keyword in keywords[:5]]
 
-
+# Generates review questions from important concepts found
+# in the notes. The goal is to encourage active recall
+# rather than simply rereading material.
 def make_quiz_questions(text: str) -> List[dict]:
     keywords = extract_keywords(text, limit=5)
     if not keywords:
