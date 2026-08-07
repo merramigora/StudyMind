@@ -10,15 +10,15 @@ I built this project because I have been both a college student and a programmin
 
 ### Dashboard
 
-![Dashboard](docs/screenshots/StudyMind_Dashboard.png)
+![Dashboard](docs/screenshots/dashboard.png)
 
 ### Study Guide Generation
 
-![Study Guide](docs/screenshots/StudyMind_study-guide.png)
+![Study Guide](docs/screenshots/study-guide.png)
 
 ### Quiz Generation
 
-![Quiz](docs/screenshots/StudyMind_quiz.png)
+![Quiz](docs/screenshots/quiz.png)
 
 ---
 
