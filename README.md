@@ -1,8 +1,24 @@
 # StudyMind
 
-StudyMind is an AI-powered study assistant designed to help college students organize lecture notes, PDFs, and class materials into study guides, quizzes, flashcards, and personalized exam preparation plans.
+StudyMind is an AI-powered study assistant for college students. It helps turn lecture notes, PDFs, and class material into study guides, quizzes, flashcards, and personalized exam preparation plans.
 
-I built this project because, as both a student and a programming tutor, I know how overwhelming it can be to manage information spread across lecture slides, PDFs, handwritten notes, and assignments. My goal was to create a study tool that feels practical for real students rather than just another generic AI chatbot.
+I built this project because I have been both a college student and a programming tutor. I know how overwhelming it can be to study from scattered lecture slides, notes, PDFs, and assignments. My goal was to build a tool that feels genuinely useful for students rather than just another generic AI chatbot.
+
+---
+
+## Screenshots
+
+### Dashboard
+
+![Dashboard](docs/screenshots/StudyMind_Dashboard.png)
+
+### Study Guide Generation
+
+![Study Guide](docs/screenshots/StudyMind_study-guide.png)
+
+### Quiz Generation
+
+![Quiz](docs/screenshots/StudyMind_quiz.png)
 
 ---
 
@@ -11,32 +27,34 @@ I built this project because, as both a student and a programming tutor, I know 
 - Upload or paste study material
 - Generate structured study guides
 - Create quiz questions from notes
-- Generate flashcards for active recall
-- Build personalized exam preparation plans
-- Track study progress and weak topics
+- Generate flashcards for review
+- Build personalized study plans
+- Identify important concepts and focus topics
 - Clean and responsive user interface
+- FastAPI backend with REST API endpoints
+- React frontend built with reusable components
 
 ---
 
-## Why I Built It
+## Why I Built This Project
 
-Many students already use AI while studying, but most existing tools are designed for general conversations rather than focused learning.
+Many students already use AI while studying, but most existing tools are too general. I wanted to create an application focused specifically on learning.
 
-StudyMind is designed specifically for academic workflows by helping students organize information, identify what to review, and prepare for exams in one place.
-
-Building this project also allowed me to strengthen my full-stack development skills while designing an architecture that can later support real AI models, document processing, and retrieval-augmented generation (RAG).
+StudyMind organizes study material into useful learning resources such as summaries, quizzes, flashcards, and study plans. The project also allowed me to gain experience designing a full-stack application with a React frontend and FastAPI backend while building an architecture that can later support modern AI technologies such as LLMs and Retrieval-Augmented Generation (RAG).
 
 ---
 
 ## Tech Stack
 
 ### Frontend
+
 - React
 - Vite
 - JavaScript
 - CSS
 
 ### Backend
+
 - Python
 - FastAPI
 - Pydantic
@@ -46,48 +64,51 @@ Building this project also allowed me to strengthen my full-stack development sk
 
 ## Current Features
 
-The current version includes a complete demonstration workflow featuring:
+The current version includes a complete demonstration workflow.
 
-- Dashboard
 - Study material input
 - Study guide generation
 - Quiz generation
 - Flashcard generation
-- Exam preparation planning
-- REST API endpoints
-- Modular project structure
+- Study plan generation
+- Backend REST API
+- Responsive interface
+- Organized project structure
 
-The application currently uses local rule-based generation so it can run without requiring an external AI API or API key. The architecture is intentionally designed to support future integration with OpenAI or other large language models.
-
----
-
-## Architecture
-
-```text
-React Frontend
-        │
-        ▼
-FastAPI Backend
-        │
-        ▼
-Rule-Based Study Generation
-        │
-        ▼
-Future LLM + RAG Integration
-```
-
-StudyMind separates the frontend, backend, and study generation logic to keep the application modular and make future AI integration straightforward.
+The backend currently uses rule-based content generation so the application can run without requiring an external AI API or API key. The project architecture is designed to support future integration with OpenAI or other LLM providers.
 
 ---
 
 ## Planned AI Features
 
-- LLM-powered study guide generation
-- AI-generated quizzes
+Future versions of StudyMind will include:
+
+- LLM-generated study guides
+- AI-powered quiz generation
 - AI-generated flashcards
+- PDF upload and parsing
 - Document question answering
+- Embeddings and vector search
 - Retrieval-Augmented Generation (RAG)
-- Vector search for uploaded documents
+
+---
+
+## Architecture
+
+StudyMind uses a modern full-stack architecture.
+
+```
+React Frontend
+        │
+        ▼
+ FastAPI Backend
+        │
+        ▼
+ Rule-Based Content Generation
+        │
+        ▼
+Future LLM + RAG Integration
+```
 
 ---
 
@@ -97,6 +118,7 @@ StudyMind separates the frontend, backend, and study generation logic to keep th
 StudyMind/
 ├── frontend/
 │   ├── src/
+│   ├── public/
 │   ├── package.json
 │   └── vite.config.js
 │
@@ -109,7 +131,7 @@ StudyMind/
 │   └── schema.sql
 │
 ├── docs/
-│   └── project-notes.md
+│   └── screenshots/
 │
 └── README.md
 ```
@@ -126,21 +148,25 @@ npm install
 npm run dev
 ```
 
-Open the local Vite development server in your browser.
+Open the local Vite URL shown in the terminal.
 
 ### Backend
 
 ```bash
 cd backend
-python3 -m venv venv
+
+python -m venv venv
+
 source venv/bin/activate
+
 pip install -r requirements.txt
+
 uvicorn app.main:app --reload
 ```
 
 The backend runs at:
 
-```text
+```
 http://127.0.0.1:8000
 ```
 
@@ -148,8 +174,9 @@ http://127.0.0.1:8000
 
 ## API Endpoints
 
-```text
+```
 GET  /health
+
 POST /api/study-guide
 POST /api/quiz
 POST /api/flashcards
@@ -160,22 +187,24 @@ POST /api/study-plan
 
 ## Future Improvements
 
-- Support PDF upload and text extraction
-- Integrate OpenAI or another LLM provider
-- Implement Retrieval-Augmented Generation (RAG)
-- Add PostgreSQL database support
-- Add user authentication
-- Save study history
-- Track study streaks
-- Deploy the frontend and backend
+- User authentication
+- Study history
+- PostgreSQL database
+- PDF text extraction
+- Cloud deployment
+- User dashboards
+- Progress tracking
+- Study streaks
+- AI personalization
+- Mobile-friendly improvements
 
 ---
 
 ## What I Learned
 
-Building StudyMind strengthened my experience with React, FastAPI, REST APIs, and full-stack application design.
+This project helped me strengthen my understanding of full-stack software development by connecting a React frontend with a FastAPI backend and designing REST APIs for communication between both layers.
 
-I learned how to separate frontend and backend responsibilities, design modular API endpoints, and build an application architecture that can later support advanced AI features such as document processing and retrieval-augmented generation.
+I also learned how to organize a larger project into maintainable components while separating the user interface from the study-generation logic. Building the application with a modular architecture makes it easier to extend with modern AI capabilities such as document processing, LLM integration, and Retrieval-Augmented Generation in future versions.
 
 ---
 
@@ -183,4 +212,5 @@ I learned how to separate frontend and backend responsibilities, design modular 
 
 **Merra Migora**
 
-Computer Science Student — University of Washington Tacoma
+Computer Science Student  
+University of Washington Tacoma
